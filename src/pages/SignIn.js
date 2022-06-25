@@ -1,4 +1,4 @@
-import styles from "./SignIn.module.css";
+import styles from "../styles/Auth.module.css";
 
 export default function SignIn() {
   return (

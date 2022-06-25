@@ -11,13 +11,16 @@
 .box {
   background: var(--gray-800);
   border-radius: 8px;
-  padding: 2.5rem;
+  padding: 1.5rem;
+  min-width: 250px;
 }
 
 .box > h1 {
   color: var(--gray-100);
   line-height: 1.6;
   margin-bottom: 1rem;
+  text-align: center;
+  font-size: 1.25rem;
 }
 
 .box > form {
@@ -49,7 +52,7 @@
   background: var(--gray-900);
   border: 0;
   resize: none;
-  padding: 1rem;
+  padding: 1rem 0.75rem;
   border-radius: 8px;
   color: var(--gray-100);
   line-height: 1.4;
@@ -72,4 +75,15 @@
 
 .box button[type="submit"]:hover {
   background: var(--green-300);
+}
+
+@media screen and (min-width: 420px) {
+  .box {
+    min-width: 400px;
+    padding: 2.5rem;
+  }
+
+  .box > h1 {
+    font-size: 1.75rem;
+  }
 }
