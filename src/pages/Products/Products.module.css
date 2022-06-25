@@ -1,0 +1,58 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.wrapper {
+  margin: 5rem 0;
+  max-width: 1020px;
+  width: 100%;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.nav button {
+  padding: 0.5rem 1.25rem;
+  margin-top: 1rem;
+  border-radius: 8px;
+  border: 0;
+  background: var(--green-500);
+  color: var(--white);
+  font-weight: bold;
+  cursor: pointer;
+
+  transition: background-color 0.1s;
+}
+
+.nav button.logout {
+  background: var(--red-500);
+}
+
+.nav button.logout:hover {
+  background: var(--red-300);
+}
+
+.nav button:hover {
+  background: var(--green-300);
+}
+
+.box {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  width: 100%;
+  border-radius: 8px;
+  padding: 1.5rem 2.5rem;
+
+  margin-top: 1rem;
+
+  background: var(--gray-800);
+}

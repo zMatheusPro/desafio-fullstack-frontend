@@ -77,6 +77,26 @@
   background: var(--green-300);
 }
 
+.box > form > span {
+  text-align: center;
+  color: var(--gray-100);
+  font-size: 0.875rem;
+  line-height: 1.6;
+  margin-top: 1rem;
+}
+
+.box > form > span > a {
+  text-align: center;
+  color: var(--green-500);
+  text-decoration: none;
+  
+  font-size: 0.875rem;
+  font-weight: 600;
+  margin-left: .25rem;
+  line-height: 1.6;
+  margin-top: 1rem;
+}
+
 @media screen and (min-width: 420px) {
   .box {
     min-width: 400px;
