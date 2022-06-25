@@ -1,25 +1,46 @@
+import { useCallback, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { useAuth } from "../../contexts/AuthContext";
+import Panel from "../_layout/Panel";
+import { Product } from "../../components/Product";
+import api from "../../services/api";
 import styles from "./Products.module.css";
 
 export default function NewProducts() {
-  const { loggout } = useAuth();
+  const [products, setProducts] = useState([]);
+
+  const getProducts = useCallback(async () => {
+    try {
+      const response = await api.get("/products");
+      setProducts(response.data);
+    } catch (err) {
+      alert(err.response.data.error);
+    }
+  }, []);
+
+  useEffect(() => {
+    getProducts();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   return (
-    <div className={styles.container}>
-      <div className={styles.wrapper}>
-        <div className={styles.nav}>
-          <Link to="/products/new">
-            <button>New Product</button>
-          </Link>
-          <button className={styles.logout} onClick={loggout}>
-            Logout
-          </button>
-        </div>
-        <div className={styles.box}>
-          <h1>Products</h1>
-        </div>
+    <Panel
+      button={
+        <Link to="/products/new">
+          <button>New Product</button>
+        </Link>
+      }
+      contentTitle={"Products"}
+    >
+      <div className={styles.productList}>
+        {products.map((product) => (
+          <Product
+            name={product.name}
+            description={product.description}
+            price={product.price}
+            id={`product-${product.id}`}
+          />
+        ))}
       </div>
-    </div>
+    </Panel>
   );
 }

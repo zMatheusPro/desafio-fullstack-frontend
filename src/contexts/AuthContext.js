@@ -10,6 +10,8 @@ export function AuthProvider({ children }) {
     const token = localStorage.getItem("@nex:token");
 
     if (token) {
+      api.defaults.headers["Authorization"] = `Bearer ${token}`;
+
       const user = JSON.parse(localStorage.getItem("@nex:user"));
       setUser(user);
     }
