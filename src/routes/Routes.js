@@ -7,7 +7,7 @@ import SignUp from "../pages/SignUp";
 export function Routes() {
   return (
     <SwitchRoutes>
-      <Route index path="/signin" element={<SignIn />} />
+      <Route path="/signin" exact element={<SignIn />} index />
       <Route path="/signup" exact element={<SignUp />} />
     </SwitchRoutes>
   );
