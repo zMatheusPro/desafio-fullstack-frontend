@@ -17,7 +17,7 @@ $ git clone https://github.com/zMatheusPro/desafio-fullstack-frontend.git && cd 
 $ npm install
 ```
 
-Acesse o arquivo `.env.exemple` renomie-o para `.env` e coloque a url da [API](https://github.com/zMatheusPro/desafio-fullstack-frontend) do seu projeto.
+Acesse o arquivo `.env.exemple` renomie-o para `.env` e coloque a url da [API](https://github.com/zMatheusPro/desafio-fullstack-backend) do seu projeto.
 
 
 
@@ -27,7 +27,7 @@ Acesse o arquivo `.env.exemple` renomie-o para `.env` e coloque a url da [API](h
 $ npm run start
 ```
 
-Lembre se de ligar [API](https://github.com/zMatheusPro/desafio-fullstack-frontend) também.
+Lembre se de ligar [API](https://github.com/zMatheusPro/desafio-fullstack-backend) também.
 
 ---
 
